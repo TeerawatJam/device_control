@@ -1,19 +1,17 @@
 #define LED_BUILTIN 2
 void setup() {
-  serial.begin(9600);//print to monitor becuase set begin
-
-  pinmode(LED_BUILTIN, OUTPUT);
+  Serial.begin(9600);//print to monitor becuase set begin
+  pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void loop() {
+  Serial.print("สวัสดี ธีรวัฒน์ จำปาสัก\n");
 
-  digitalwrile(LED_BUILTIN, 1);
-  serial.print("สวัสดี ธีรวัฒน์ จำปาสัก");
-  serial.print("light ...\n");
+  digitalWrile(LED_BUILTIN, 1);
+  Serial.print("light ...\n");
   delay(1000);
 
-  digitalwrile(LED_BUILTIN, 0);
-  serial.print("สวัสดี ธีรวัฒน์ จำปาสัก");
-  serial.print("not light ...\n");
+  digitalWrile(LED_BUILTIN, 0);
+  Serial.print("not light ...\n");
   delay(1000);
 }
